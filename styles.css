@@ -1,10 +1,8 @@
 body {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
-
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
     margin: 0 auto;
@@ -27,10 +25,9 @@ nav ul {
     justify-content: center;
 }
 
-
 nav ul li {
     margin: 0 15px;
-    transition: .5s ease;
+    transition: 0.5s ease;
 }
 
 nav ul li:hover {
@@ -66,6 +63,7 @@ footer {
 
 /* Estilo da bola branca */
 .ball1 {
+    position: absolute; /* Adicionado para garantir que a bola se mova em relação ao body */
     width: 80px;
     height: 80px;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.493));
@@ -74,29 +72,29 @@ footer {
     top: 20%;
     left: 30%;
     animation: moveBall1 15s ease-in-out infinite alternate;
-    overflow: hidden;
 }
 
 @keyframes moveBall1 {
     0% {
-        transform: translate3d(-50%, -500%, 0) scale(1);
+        transform: translate3d(-50%, -50%, 0) scale(1);
     }
     25% {
-        transform: translate3d(200%, -60%, 50px) scale(1.2);
+        transform: translate3d(100%, -20%, 50px) scale(1.2);
     }
     50% {
-        transform: translate3d(-20%, 80%, -50px) scale(0.8);
+        transform: translate3d(20%, 50%, -50px) scale(0.8);
     }
     75% {
-        transform: translate3d(800%, 500%, 30px) scale(1.1);
+        transform: translate3d(50%, 80%, 30px) scale(1.1);
     }
     100% {
-        transform: translate3d(-300%, -50%, 0) scale(1);
+        transform: translate3d(-30%, -20%, 0) scale(1);
     }
 }
 
 /* Bola 2 */
 .ball2 {
+    position: absolute; /* Adicionado para garantir que a bola se mova em relação ao body */
     width: 100px;
     height: 100px;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.493));
@@ -105,29 +103,29 @@ footer {
     top: 50%;
     left: 70%;
     animation: moveBall2 20s ease-in-out infinite alternate;
-    overflow: hidden;
 }
 
 @keyframes moveBall2 {
     0% {
-        transform: translate3d(-50%, -400%, 0) scale(1);
+        transform: translate3d(-50%, -50%, 0) scale(1);
     }
     25% {
-        transform: translate3d(40%, -800%, 100px) scale(1.3);
+        transform: translate3d(40%, -60%, 100px) scale(1.3);
     }
     50% {
-        transform: translate3d(-10%, 100%, -80px) scale(0.9);
+        transform: translate3d(-10%, 60%, -80px) scale(0.9);
     }
     75% {
-        transform: translate3d(120%, 80%, 70px) scale(1.2);
+        transform: translate3d(70%, 40%, 70px) scale(1.2);
     }
     100% {
-        transform: translate3d(-400%, -1000%, 0) scale(1);
+        transform: translate3d(-40%, -50%, 0) scale(1);
     }
 }
 
 /* Bola 3 */
 .ball3 {
+    position: absolute; /* Adicionado para garantir que a bola se mova em relação ao body */
     width: 120px;
     height: 120px;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.493));
@@ -136,24 +134,23 @@ footer {
     top: 70%;
     left: 50%;
     animation: moveBall3 25s 2s ease-in-out infinite alternate;
-    overflow: hidden;
 }
 
 @keyframes moveBall3 {
     0% {
-        transform: translate3d(-50%, -300%, 0) scale(1);
+        transform: translate3d(-50%, -50%, 0) scale(1);
     }
     25% {
-        transform: translate3d(-600%, -40%, 150px) scale(1.4);
+        transform: translate3d(-60%, -40%, 150px) scale(1.4);
     }
     50% {
-        transform: translate3d(-30%, 120%, -100px) scale(1.0);
+        transform: translate3d(-30%, 50%, -100px) scale(1.0);
     }
     75% {
-        transform: translate3d(1000%, 1000%, 90px) scale(1.3);
+        transform: translate3d(50%, 100%, 90px) scale(1.3);
     }
     100% {
-        transform: translate3d(500%, -150%, 0) scale(1);
+        transform: translate3d(50%, -15%, 0) scale(1);
     }
 }
 
@@ -224,7 +221,6 @@ footer {
     background-image: linear-gradient(to left, blue, orangered, yellow);
     background-size: 500% 100%; 
     border-radius: 12px;
-
     margin: 0 auto;
     animation: degrade 3s infinite alternate;
 }
