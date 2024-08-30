@@ -79,7 +79,8 @@ footer {
     width: 100%;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
+    font-size: small;
+    font-weight: lighter;
 }
 
 .ball1, .ball2, .ball3 {
