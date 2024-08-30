@@ -1,243 +1,141 @@
-
 body {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    margin: 0 auto;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
     padding: 0;
     background-color: #191916;
-    position: relative;
-    overflow: hidden; /* Para evitar barras de rolagem quando a bola sair da tela */
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 header {
-    display: flex;
-    color: white;
-    padding: 36px 76px;
-    align-items: start;
+    width: 100%;
+    background: rgba(25, 25, 22, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
-
 
 nav ul li {
     margin: 0 15px;
-    transition: .5s ease;
-}
-
-nav ul li:hover {
-    transform: scale(1.10);
-    opacity: 0.75;
+    position: relative;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 400;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
 }
 
-p {
-    font-size: small;
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #f39c12;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
 }
 
 main {
-    max-width: 1176px;
-    padding: 20px;
+    margin-top: 100px; /* Ajuste para deixar espaço para o header fixo */
     text-align: center;
-    color: white;
+    max-width: 800px;
+    padding: 20px;
 }
 
 footer {
-    color: #2e2e33;
-    text-align: center;
-    padding: 10px 0;
-    font-size: small;
-    position: absolute;
-    bottom: 20%;
+    position: fixed;
+    bottom: 10px;
     width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
 }
 
-/* Estilo da bola branca */
+.ball1, .ball2, .ball3 {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
 .ball1 {
     width: 80px;
     height: 80px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.493));
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.329);
-    border-radius: 50%;
-    top: 20%;
-    left: 30%;
-    animation: moveBall1 15s ease-in-out infinite alternate;
-    overflow: hidden;
+    top: 10%;
+    left: 20%;
+    animation: moveBall1 12s infinite alternate ease-in-out;
+}
+
+.ball2 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 70%;
+    animation: moveBall2 18s infinite alternate ease-in-out;
+}
+
+.ball3 {
+    width: 120px;
+    height: 120px;
+    top: 80%;
+    left: 40%;
+    animation: moveBall3 22s infinite alternate ease-in-out;
 }
 
 @keyframes moveBall1 {
     0% {
-        transform: translate3d(-50%, -500%, 0) scale(1);
-    }
-    25% {
-        transform: translate3d(200%, -60%, 50px) scale(1.2);
-    }
-    50% {
-        transform: translate3d(-20%, 80%, -50px) scale(0.8);
-    }
-    75% {
-        transform: translate3d(800%, 500%, 30px) scale(1.1);
+        transform: translate(-50%, -50%) scale(1);
     }
     100% {
-        transform: translate3d(-300%, -50%, 0) scale(1);
+        transform: translate(300%, 300%) scale(1.2);
     }
-}
-
-/* Bola 2 */
-.ball2 {
-    width: 100px;
-    height: 100px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.493));
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.329);
-    border-radius: 50%;
-    top: 50%;
-    left: 70%;
-    animation: moveBall2 20s ease-in-out infinite alternate;
-    overflow: hidden;
 }
 
 @keyframes moveBall2 {
     0% {
-        transform: translate3d(-50%, -400%, 0) scale(1);
-    }
-    25% {
-        transform: translate3d(40%, -800%, 100px) scale(1.3);
-    }
-    50% {
-        transform: translate3d(-10%, 100%, -80px) scale(0.9);
-    }
-    75% {
-        transform: translate3d(120%, 80%, 70px) scale(1.2);
+        transform: translate(-50%, -50%) scale(1);
     }
     100% {
-        transform: translate3d(-400%, -1000%, 0) scale(1);
+        transform: translate(-300%, -300%) scale(0.8);
     }
-}
-
-/* Bola 3 */
-.ball3 {
-    width: 120px;
-    height: 120px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.493));
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.329);
-    border-radius: 50%;
-    top: 70%;
-    left: 50%;
-    animation: moveBall3 25s 2s ease-in-out infinite alternate;
-    overflow: hidden;
 }
 
 @keyframes moveBall3 {
     0% {
-        transform: translate3d(-50%, -300%, 0) scale(1);
-    }
-    25% {
-        transform: translate3d(-600%, -40%, 150px) scale(1.4);
-    }
-    50% {
-        transform: translate3d(-30%, 120%, -100px) scale(1.0);
-    }
-    75% {
-        transform: translate3d(1000%, 1000%, 90px) scale(1.3);
+        transform: translate(-50%, -50%) scale(1);
     }
     100% {
-        transform: translate3d(500%, -150%, 0) scale(1);
-    }
-}
-
-/* ===== TEXTO ANIMADO ===== */
-
-.texto-animado {
-    font-size: 40%;
-    color: #DBDDFF;
-    margin-top: 64px;
-}
-
-.h1-animado {
-    font-weight: 300;
-}
-
-.h1-animado span {
-    position: relative;
-}
-
-.h1-animado span::before {
-    content: "";
-    color: #566caa;
-    animation: palavras 30s infinite;
-}
-
-.h1-animado span::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    border-left: 2px solid #566caa;
-    right: -10px;
-    animation: cursor 1s infinite, digita 30s steps(35) infinite;
-    width: calc(100% + 15px);
-    background-color: #191916;
-}
-
-@keyframes digita {
-    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
-        width: 0;
-    }
-    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
-        width: calc(100% + 15px);
-    }
-}
-
-@keyframes cursor {
-    0% {
-        border-left: 2px solid #161619;
-    }
-}
-
-@keyframes palavras {
-    0%, 33% {
-        content: "visões em realidade com criatividade e precisão.";
-    }
-    34%, 64% {
-        content: "desafios em oportunidades com inovação e estratégia.";
-    }
-    65%, 100% {
-        content: "ideias em resultados concretos com paixão e expertise.";
-    }
-}
-
-/* ===== GRADIENTE INFINITO ===== */
-.gradiente-infinito {
-    height: 4px;
-    width: 75%;
-    background-image: linear-gradient(to left, blue, orangered, yellow);
-    background-size: 500% 100%; 
-    border-radius: 12px;
-
-    margin: 0 auto;
-    animation: degrade 3s infinite alternate;
-}
-
-@keyframes degrade {
-    0% {
-        background-position-x: 0%;
-    }
-    50% {
-        background-position-x: 50%;
-    }
-    100% {
-        background-position-x: 100%;
+        transform: translate(400%, -400%) scale(1.1);
     }
 }
