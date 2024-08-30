@@ -14,11 +14,11 @@ body {
 
 header {
     width: 100%;
-    background: rgba(25, 25, 22, 0.8);
+    background: rgba(25, 25, 22, 0.1);
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px 0;
+    padding: 10px 0;
     z-index: 1000;
 }
 
@@ -31,7 +31,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 12px;
     position: relative;
 }
 
@@ -52,7 +52,7 @@ nav ul li a::before {
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: #f39c12;
+    background-color: #f37712;
     transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -62,7 +62,7 @@ nav ul li a:hover::before {
 }
 
 nav ul li a:hover {
-    color: #f39c12;
+    color: #f37712;
     transform: scale(1.1);
 }
 
