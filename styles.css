@@ -76,6 +76,7 @@ footer {
     top: 20%;
     left: 30%;
     animation: moveBall1 15s ease-in-out infinite alternate;
+    overflow: hidden;
 }
 
 @keyframes moveBall1 {
@@ -106,6 +107,7 @@ footer {
     top: 50%;
     left: 70%;
     animation: moveBall2 20s ease-in-out infinite alternate;
+    overflow: hidden;
 }
 
 @keyframes moveBall2 {
@@ -136,6 +138,7 @@ footer {
     top: 70%;
     left: 50%;
     animation: moveBall3 25s 2s ease-in-out infinite alternate;
+    overflow: hidden;
 }
 
 @keyframes moveBall3 {
