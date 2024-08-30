@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #191916;
+    color: white;
+    position: relative;
+    overflow-x: hidden; /* Para evitar rolagem horizontal */
+}
+
+header {
+    display: flex;
+    color: white;
+    padding: 36px 16px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: fixed; /* Fixar o header no topo */
+    top: 0;
+    background-color: #191916; /* Fundo para o header não ficar transparente */
+    z-index: 1000; /* Manter o header acima de outros conteúdos */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+    transition: 0.5s ease;
+}
+
+nav ul li:hover {
+    transform: scale(1.10);
+    opacity: 0.75;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 800px;
+    padding: 80px 20px 20px; /* Ajuste para evitar sobreposição com o header fixo */
+    text-align: left;
+    margin: 0 auto; /* Centralizar o main */
+}
+
+.formacao {
+    padding: 40px 20px;
+}
+
+.formacao h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.linha {
+    width: 60px;
+    height: 4px;
+    background-image: linear-gradient(to left, blue, orangered, yellow);
+    background-size: 500% 100%; 
+    border-radius: 12px;
+    margin: 0 auto 40px auto;
+    animation: degrade 3s infinite alternate;
+}
+
+@keyframes degrade {
+    0% {
+        background-position-x: 0%;
+    }
+    50% {
+        background-position-x: 50%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+.formacao-item {
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor leitura */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.formacao-item h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.formacao-item p {
+    margin: 5px 0 10px 0;
+    line-height: 1.5;
+}
+
+footer {
+    color: #2e2e33;
+    text-align: center;
+    padding: 10px 0;
+    font-size: small;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #191916; /* Fundo para o footer não ficar transparente */
+}
