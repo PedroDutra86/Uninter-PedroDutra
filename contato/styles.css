@@ -66,82 +66,24 @@ nav ul li a:hover {
     color: #f37712;
     transform: scale(1.1);
 }
+
 main {
     max-width: 800px;
     padding: 80px 20px 20px;
     text-align: center;
 }
 
-.projetos {
+section {
     padding: 40px 20px;
 }
 
-.projetos h1 {
+section h1 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.linha {
-    width: 60px;
-    height: 4px;
-    background-image: linear-gradient(to left, blue, orangered, yellow);
-    background-size: 500% 100%;
-    border-radius: 12px;
-    margin: 0 auto 40px auto;
-    animation: degrade 3s infinite alternate;
-}
-
-@keyframes degrade {
-    0% {
-        background-position-x: 0%;
-    }
-    50% {
-        background-position-x: 50%;
-    }
-    100% {
-        background-position-x: 100%;
-    }
-}
-
-.projeto-item {
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease;
-}
-
-.projeto-item:hover {
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-}
-
-.logo-container {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 20px;
-    background: #ffd9fc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.logo {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.projeto-item h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.projeto-item p {
-    margin: 10px 0;
-    line-height: 1.6;
+section p {
+    margin: 20px 0;
 }
 
 .botao {
