@@ -69,7 +69,7 @@ nav ul li a:hover {
 
 main {
     max-width: 800px;
-    padding: 80px 20px 20px; /* Ajuste para evitar sobreposição com o header fixo */
+    padding: 80px 20px 20px; 
     text-align: left;
     margin: 0 auto; /* Centralizar o main */
 }

@@ -9,8 +9,7 @@ body {
     padding: 0;
     background-color: #191916;
     color: white;
-    position: relative;
-    overflow-x: hidden;
+    position: relative; /* Para que tudo que esteja dentro do body tenha posição relativa a ele */
 }
 
 header {
@@ -20,7 +19,7 @@ header {
     top: 0;
     left: 0;
     padding: 10px 0;
-    z-index: 1000;
+    z-index: 1000; /* Para deixar o cabeçalho sempre acima */
 }
 
 nav ul {
@@ -80,6 +79,9 @@ main {
     font-size: 36px;
     margin-bottom: 20px;
 }
+
+/* Aqui eu defini um gradiente para a linha que coloquei com intuito de fazer um keyframe infinite
+para parecer que existe um degrade infinito */
 
 .linha {
     width: 60px;

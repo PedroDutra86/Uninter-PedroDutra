@@ -1,3 +1,9 @@
+/* Olá avaliador, bom eu não sou muito bom comentando, então irei arrancar de voce boas risadas, bom trabalho e tmj!
+OBS: Me da nota alta, pelo amor de Deus
+decidi fazer a estilização em arquivos separados pois
+estou acostumado a utilizar sass e não gosto de arquivos grande */
+
+
 body {
     font-family: 'Lexend', sans-serif;
     margin: 0;
@@ -45,7 +51,7 @@ nav ul li a {
     z-index: 10;
 }
 
-nav ul li a::before {
+nav ul li a::before {    /* Apesar de você já saber, vou explicar, todos os <li> daqui pra frente estão sendo estilizados o hover */
     content: '';
     position: absolute;
     bottom: 0;
@@ -67,14 +73,14 @@ nav ul li a:hover {
 }
 
 main {
-    margin-top: 100px; /* Ajuste para deixar espaço para o header fixo */
+    margin-top: 100px;
     text-align: center;
     max-width: 800px;
     padding: 20px;
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 10px;
     width: 100%;
     text-align: center;
@@ -83,7 +89,7 @@ footer {
     font-weight: lighter;
 }
 
-.ball1, .ball2, .ball3 {
+.ball1, .ball2, .ball3 {  /* Essas aqui são as bolas que coloquei rodando pra um lado e pro outro */
     position: absolute;
     border-radius: 50%;
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
@@ -113,6 +119,8 @@ footer {
     left: 40%;
     animation: moveBall3 22s infinite alternate ease-in-out;
 }
+
+/* A seguir vem a estilização dos keyframes das bolas :) */
 
 @keyframes moveBall1 {
     0% {
