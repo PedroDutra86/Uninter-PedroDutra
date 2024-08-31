@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #191916;
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    background: rgba(25, 25, 22, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 0px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #f37712;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+nav ul li a:hover {
+    color: #f37712;
+    transform: scale(1.1);
+}
+
+main {
+    max-width: 800px;
+    padding: 80px 20px 20px;
+    text-align: center;
+}
+
+.sobre-mim {
+    padding: 40px 20px;
+}
+
+.sobre-mim h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.sobre-mim p {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.foto-container {
+    margin: 0 auto 20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255, 0, 150, 0.6), rgba(0, 204, 255, 0.6), rgba(255, 0, 204, 0.6), rgba(0, 255, 255, 0.6));
+    background-size: 400% 400%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.foto-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.foto {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+footer {
+    color: #2e2e33;
+    text-align: center;
+    padding: 10px 0;
+    font-size: small;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #191916;
+}
